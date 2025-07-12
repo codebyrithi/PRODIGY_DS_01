@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the dataset
-data = pd.read_csv('path_to_your_downloaded_file.csv')
+data = pd.read_csv('C:\Users\DELL\Downloads\iris.csv.zip\kaggle-api-main\kaggle\tests')
 
 # Check the first few rows of the dataset to understand its structure
 print(data.head())
