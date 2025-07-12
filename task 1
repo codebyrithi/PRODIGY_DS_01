@@ -1,0 +1,30 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataset
+data = pd.read_csv('path_to_your_downloaded_file.csv')
+
+# Check the first few rows of the dataset to understand its structure
+print(data.head())
+
+# Assuming the dataset has columns: 'Country Name', 'Country Code', 'Year', 'SP.POP.TOTL'
+# You might need to adjust column names based on your dataset
+
+# Focus on a specific country or the total population over years
+# Example: Global population (total world population over years)
+global_population = data[['Year', 'SP.POP.TOTL']]
+
+# Remove any missing values
+global_population = global_population.dropna()
+
+# Plotting the data as a bar chart
+plt.figure(figsize=(10, 6))
+plt.bar(global_population['Year'], global_population['SP.POP.TOTL'], color='skyblue')
+plt.xlabel('Year')
+plt.ylabel('Total Population')
+plt.title('Global Population Growth Over Time')
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+# Show the plot
+plt.show()
